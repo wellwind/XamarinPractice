@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinFormsPractice"
+             x:Class="XamarinFormsPractice.MainPage">
+
+    <StackLayout>
+        <StackLayout.Padding>
+            <Thickness>
+                0, 20, 0, 0
+            </Thickness>
+        </StackLayout.Padding>
+        <Label x:Name="DisplayLabel" 
+            Text="Welcome to Xamarin Forms!" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry x:Name="InputEntry" />
+        <Button Clicked="Button_Clicked" Text="Show" />
+    </StackLayout>
+</ContentPage>
