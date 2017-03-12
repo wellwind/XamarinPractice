@@ -16,7 +16,7 @@ namespace DeepNavigationPractice.ViewModels
             ea.GetEvent<ColorChangeEvent>().Publish("Black");
             GoHomePageCommand = new DelegateCommand(async () =>
             {
-                await navigationService.NavigateAsync("MainPage");
+                await navigationService.NavigateAsync("any:///MainNavigationPage/MainPage");
             });
 
             
