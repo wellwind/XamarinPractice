@@ -11,13 +11,15 @@ namespace DeepNavigationPractice.ViewModels
     {
         public DelegateCommand GoHomePageCommand { get; set; }
 
-        public Page4ViewModel(INavigationService navigationService)
+        public Page4ViewModel(INavigationService navigationService, Prism.Events.EventAggregator ea)
         {
+            ea.GetEvent<ColorChangeEvent>().Publish("Black");
             GoHomePageCommand = new DelegateCommand(async () =>
             {
                 await navigationService.NavigateAsync("MainPage");
             });
 
+            
         }
     }
 }
