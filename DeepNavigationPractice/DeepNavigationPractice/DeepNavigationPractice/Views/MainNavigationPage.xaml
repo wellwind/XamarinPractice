@@ -5,5 +5,11 @@
                 prism:ViewModelLocator.AutowireViewModel="True"
                 x:Class="DeepNavigationPractice.Views.MainNavigationPage"
                 BarBackgroundColor="{Binding PropertyName}">
-  
+    <NavigationPage.ToolbarItems>
+        <ToolbarItem Text="Save"></ToolbarItem>
+        <ToolbarItem Text="Cancel"></ToolbarItem>
+        
+        <ToolbarItem Text="Sub1" Order="Secondary" Priority="0" />
+        <ToolbarItem Text="Sub2" Order="Secondary" Priority="0" />
+    </NavigationPage.ToolbarItems>
 </NavigationPage>
