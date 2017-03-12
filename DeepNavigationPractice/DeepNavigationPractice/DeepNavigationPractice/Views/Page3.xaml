@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="DeepNavigationPractice.Views.Page3">
+             x:Class="DeepNavigationPractice.Views.Page3"
+             Title="Page3"
+             NavigationPage.HasNavigationBar="False">
     <StackLayout>
         <Label Text="Page3"></Label>
         <Button Text="Go Next" Command="{Binding GoNextPageCommand}"></Button>

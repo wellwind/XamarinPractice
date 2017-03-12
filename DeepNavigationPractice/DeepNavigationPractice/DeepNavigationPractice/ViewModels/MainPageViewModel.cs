@@ -37,6 +37,7 @@ namespace DeepNavigationPractice.ViewModels
                 await _navigationService.NavigateAsync("Page2");
                 await _navigationService.NavigateAsync("Page3");
                 await _navigationService.NavigateAsync("Page4");
+
             });
         }
 
