@@ -20,8 +20,15 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <BoxView Grid.Row="0" Grid.Column="0" Color="Yellow" />
+        <BoxView Grid.Row="0" Grid.Column="0" Color="Yellow"/>
+        <Label Grid.Row="0" Grid.Column="0" TextColor="Red" Text="Test(0, 0)" Margin="20, 50, 0, 0"/>
+
         <BoxView Grid.Row="1" Grid.Column="1" Color="Yellow" />
+
+        <Label Grid.Row="1" Grid.Column="1" TextColor="Blue" Text="Test(1, 1)" 
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
         <BoxView Grid.Row="2" Grid.Column="2" Color="Yellow" />
 
         <BoxView Grid.Row="2" Grid.Column="0" Color="Blue" Grid.ColumnSpan="2" />
