@@ -30,7 +30,40 @@
                VerticalOptions="Center" />
 
         <BoxView Grid.Row="2" Grid.Column="2" Color="Yellow" />
-
         <BoxView Grid.Row="2" Grid.Column="0" Color="Blue" Grid.ColumnSpan="2" />
+
+
+        <StackLayout Grid.Row="2" Grid.Column="1" Spacing="0">
+            <BoxView Color="Aqua" />
+            <BoxView Color="Black" />
+            <BoxView Color="Yellow" />
+            <Label Text="Scroll↓" BackgroundColor="White"></Label>
+            <ScrollView>
+                <!-- ScrollView只能有一個節點，所以加一個StackLayout -->
+                <StackLayout>
+                    <BoxView Color="Red" />
+                    <BoxView Color="Aqua" />
+                    <BoxView Color="Black" />
+                    <BoxView Color="Yellow" />
+                    <BoxView Color="Red" />
+                    <BoxView Color="Aqua" />
+                    <BoxView Color="Black" />
+                    <BoxView Color="Yellow" />
+                    <BoxView Color="Red" />
+                    <BoxView Color="Aqua" />
+                    <BoxView Color="Black" />
+                    <BoxView Color="Yellow" />
+                    <BoxView Color="Red" />
+                    <BoxView Color="Aqua" />
+                    <BoxView Color="Black" />
+                    <BoxView Color="Yellow" />
+                    <BoxView Color="Red" />
+                    <BoxView Color="Aqua" />
+                    <BoxView Color="Black" />
+                    <BoxView Color="Yellow" />
+                    <BoxView Color="Red" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
     </Grid>
 </ContentPage>
