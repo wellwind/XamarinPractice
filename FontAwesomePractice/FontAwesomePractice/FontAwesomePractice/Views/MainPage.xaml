@@ -5,7 +5,15 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="FontAwesomePractice.Views.MainPage"
              Title="MainPage">
-
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="FontAwesome"
+               x:TypeArguments="x:String"
+               iOS="fontawesome"
+               Android="fontawesome"
+               WinPhone="/Assets/Fonts/fontawesome.ttf#FontAwesome" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="{Binding Title}" />
         <Label Text="&#xf164;"
@@ -20,5 +28,25 @@
                     Android="fontawesome"/>
             </Label.FontFamily>
         </Label>
+
+        <Button Text="&#xf164;"
+               HorizontalOptions="Center"
+               FontSize="60"
+               Margin="0,0,20,0">
+            <Button.FontFamily>
+                <OnPlatform
+                    x:TypeArguments="x:String"
+                    iOS="fontawesome"
+                    Android="fontawesome"/>
+            </Button.FontFamily>
+        </Button>
+
+        <Label Text="&#xf164;"
+             TextColor="Yellow"
+             HorizontalOptions="Center"
+             FontSize="60"
+             FontFamily="{StaticResource FontAwesome}"
+             Margin="0,0,20,0"
+          />
     </StackLayout>
 </ContentPage>
