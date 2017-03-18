@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:Renderers="clr-namespace:FontAwesomePractice.Renderers"
              x:Class="FontAwesomePractice.Views.MainPage"
              Title="MainPage">
     <ContentPage.Resources>
@@ -48,5 +49,12 @@
              FontFamily="{StaticResource FontAwesome}"
              Margin="0,0,20,0"
           />
+
+        <Renderers:FontAwesomeLabel Text="&#xf164;"
+             TextColor="Black"
+             HorizontalOptions="Center"
+             FontSize="60"
+             Margin="0,0,20,0"
+           />
     </StackLayout>
 </ContentPage>
