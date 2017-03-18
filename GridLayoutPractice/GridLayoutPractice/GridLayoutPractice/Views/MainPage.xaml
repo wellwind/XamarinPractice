@@ -5,7 +5,23 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="GridLayoutPractice.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-  </StackLayout>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Row="0" Grid.Column="0" Color="Yellow" />
+        <BoxView Grid.Row="1" Grid.Column="1" Color="Yellow" />
+        <BoxView Grid.Row="2" Grid.Column="2" Color="Yellow" />
+
+        <BoxView Grid.Row="2" Grid.Column="0" Color="Blue" Grid.ColumnSpan="2" />
+    </Grid>
 </ContentPage>
