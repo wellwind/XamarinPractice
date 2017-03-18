@@ -6,7 +6,9 @@
              x:Class="GridLayoutPractice.Views.MainPage"
              Title="MainPage">
 
-    <Grid>
+    <Grid
+        RowSpacing="0"
+        ColumnSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition Height="*" />
