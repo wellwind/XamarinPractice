@@ -4,6 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:behavior="clr-namespace:Behaviors;assembly=Behaviors"
              x:Class="ListViewPractice_01_Basic.Views.MainPage"
+             x:Name="MainPage"
              Title="MainPage">
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="{Binding Title}" />
@@ -25,7 +26,13 @@
                                 <ColumnDefinition Width="50"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Text="+"></Button>
+                            <Button Grid.Column="0" 
+                                    Text="D" 
+                                    Command="{Binding 
+                                        Path=BindingContext.DeleteCommand,
+                                        Source={x:Reference MainPage}}"
+                                    CommandParameter="{Binding}">
+                            </Button>
                             <Label Grid.Column="1" VerticalTextAlignment="Center" Text="{Binding StuNam}" />
                         </Grid>
                     </ViewCell>

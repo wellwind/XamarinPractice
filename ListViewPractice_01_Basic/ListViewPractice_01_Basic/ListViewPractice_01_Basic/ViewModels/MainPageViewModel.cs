@@ -46,6 +46,8 @@ namespace ListViewPractice_01_Basic.ViewModels
         }
 
         public DelegateCommand StudentItemTappedCommand { get; set; }
+                                    
+        public DelegateCommand<Student> DeleteCommand { get; set; }
 
         public MainPageViewModel(INavigationService navigationService, IEventAggregator eventAggregator)
         {
@@ -66,11 +68,17 @@ namespace ListViewPractice_01_Basic.ViewModels
                 await navigationService.NavigateAsync("StudentDataPage", param);
             });
 
+            DeleteCommand = new DelegateCommand<Student>((student) =>
+            {
+                this.Students.Remove(student);
+            });
+
             eventAggregator.GetEvent<StudentDataUpdatedEvent>().Subscribe((Student student) =>
             {
                 var targetStudent = this.Students.First(stu => stu.StuNum == student.StuNum);
                 targetStudent.StuNam = student.StuNam;
             });
+            
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
