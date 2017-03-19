@@ -2,12 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:behavior="clr-namespace:Behaviors;assembly=Behaviors"
              x:Class="ListViewPractice_01_Basic.Views.MainPage"
              Title="MainPage">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
-        <ListView ItemsSource="{Binding Students}">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <ListView 
+            ItemsSource="{Binding Students}"
+            SelectedItem="{Binding SelectedStudent}">
+            <!-- 設定ItemTapped事件轉到StudentItemTappedCommand -->
+            <ListView.Behaviors>
+                <behavior:EventHandlerBehavior EventName="ItemTapped">
+                    <behavior:InvokeCommandAction Command="{Binding StudentItemTappedCommand}" />
+                </behavior:EventHandlerBehavior>
+            </ListView.Behaviors>
+            <!-- 實際每筆內容的顯示 -->
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
